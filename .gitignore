@@ -1,0 +1,177 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a script, but you might want to
+#  commit them if you have chosen to build executables rather than shipping
+#  python files.
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# PEP 582; __pypackages__ directory
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# macOS
+.DS_Store
+
+# MATLAB
+*.asv
+*.mex*
+*.mlappinstall
+*.mlpkginstall
+*.mltbx
+*.p
+*.type
+*.orig
+psfragLog.tex
+*.fig
+*.log
+*.m~
+*.slx~
+*.sltx~
+*.mdl~
+*.autosave
+MATLAB_Editor_*.log
+MATLAB_crash_dump.*
+WindowState.xml
+MLHistory.xml
+History.xml
+StartMenu.xml
+matlab.prf
+javaclasspath.txt
+pathdef.m
+slprj/
+sfprj/
+_clang-format-config
+.matlab7rc.sh
+Settings/
+UserPreferences.xml
+profilereport.html
+HTML/
+slcov_output/
+*.rrmlgw
+results/
+output/
+BuildArtifacts_*.zip
+CodeMavericks*.mat
+
+# Large Data Files and Installers (Specific to this project)
+Miniconda3-latest-MacOSX-arm64.sh
+Miniconda3-latest-MacOSX-x86_64.sh
+simulated_spectrograms/
+video_meshes/
+Mask_RCNN/
+human mesh recovery/
+video_frames/
+
+# If you choose to use Git LFS for some .mat files, 
+# you would list them here after initializing LFS, e.g.:
+# *.mat filter=lfs diff=lfs merge=lfs -text
+# But for now, let's assume all .mat in data folders are excluded.
+# If MeshInfoMatFiles contains source data and not generated, remove it from here.
+MeshInfoMatFiles/*.mat 

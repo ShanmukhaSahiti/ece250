@@ -1,0 +1,7 @@
+numpy
+scipy
+matplotlib
+opencv-python
+natsort
+statsmodels
+open3d 
