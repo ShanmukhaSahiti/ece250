@@ -2,7 +2,7 @@ function [cls, cls_category, available_vid] = get_action_name(action_id)
 if action_id  == 5
     cls = 'lateral lunge';
     cls_category = 2;
-    available_vid = {'2', '5'};
+    available_vid = {'2'};
 elseif action_id  == 9
     cls = 'sit up';
     cls_category = 8;

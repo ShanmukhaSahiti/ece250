@@ -77,19 +77,112 @@ if cls_category == 1 || cls_category == 2 %|| cls_category == 3
     person_box_width = person_box_time(4,:)-person_box_time(2,:);
     if cls_category == 1
         [~, standing_frame] = max(person_box_height);
-        person_box_ACF = autocorr(person_box_height,length(person_box_height)-50);
+        
+        series_cat1 = person_box_height;
+        N_cat1 = length(series_cat1);
+        disp(['DEBUG: cls_category=1: series length = ', num2str(N_cat1)]);
+        person_box_ACF = []; % Initialize
+        if N_cat1 >= 2 % Must have at least 2 points for any ACF
+            lags_val_cat1 = N_cat1 - 50; % Desired
+            disp(['DEBUG: cls_category=1: desired lags (-50) = ', num2str(lags_val_cat1)]);
+            if lags_val_cat1 > 0 && lags_val_cat1 < N_cat1 
+                person_box_ACF = autocorr(series_cat1, 'NumLags', lags_val_cat1);
+                disp('DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.');
+            else 
+                lags_fallback_cat1 = N_cat1 - 1;
+                disp(['DEBUG: cls_category=1: -50 lags invalid, trying fallback N-1 lags = ', num2str(lags_fallback_cat1)]);
+                if lags_fallback_cat1 > 0 % Ensure N-1 is at least 1
+                    person_box_ACF = autocorr(series_cat1, 'NumLags', lags_fallback_cat1);
+                    disp('DEBUG: cls_category=1: autocorr with N-1 lags SUCCEEDED.');
+                else
+                    disp('DEBUG: cls_category=1: N-1 lags also invalid (<=0). ACF set to [].');
+                end
+            end
+        else
+            disp('DEBUG: cls_category=1: Series too short for ACF. ACF set to [].');
+        end
+        if ~isempty(person_box_ACF)
+             disp(['DEBUG: cls_category=1: Final ACF class: ', class(person_box_ACF), ', size: [', num2str(size(person_box_ACF,1)), ' ', num2str(size(person_box_ACF,2)), ']']);
+        end
+
         [~,peak_locs] = findpeaks(person_box_ACF,'MinPeakDistance',25);
-        action_period = mean(diff([0 peak_locs]));
+        
+        if isempty(peak_locs)
+            action_period = NaN; % No peaks found, so period is undefined or use a default
+            disp('DEBUG: No peaks found by findpeaks. action_period set to NaN.');
+        else
+            peak_locs = peak_locs(:)'; % Ensure peak_locs is a row vector for [0 peak_locs]
+            action_period = mean(diff([0 peak_locs]));
+            disp(['DEBUG: Peaks found. action_period calculated as: ', num2str(action_period)]);
+        end
     else
         [~, standing_frame] = max(person_box_height- person_box_width);
+
+        debug_series_data = person_box_height - person_box_width;
+        disp('DEBUG: About to call autocorr (cls_category not 1). Series data properties:');
+        disp(['  Class: ', class(debug_series_data)]);
+        disp(['  Size: [', num2str(size(debug_series_data,1)), ' ', num2str(size(debug_series_data,2)), ']']);
+        disp(['  Is all finite? ', num2str(all(isfinite(debug_series_data)))]');
+        disp(['  Is real? ', num2str(isreal(debug_series_data))]);
+        
+        person_box_ACF = []; % Initialize
         try
-            person_box_ACF = autocorr(person_box_height- person_box_width,length(person_box_height)-50);
-        catch % very short video
-            % standing front leg raise: 10-2
-            person_box_ACF = autocorr(person_box_height- person_box_width,length(person_box_height)-1);
+            disp('DEBUG: Trying autocorr in TRY block for cls_category not 1');
+            raw_series_try = person_box_height- person_box_width; % Same as debug_series_data
+            N_try = length(raw_series_try);
+            lags_try = N_try - 50;
+            disp(['DEBUG: TRY block: series length = ', num2str(N_try), ', lags (-50) = ', num2str(lags_try)]);
+
+            if N_try >=2 
+                if lags_try > 0 && lags_try < N_try
+                    person_box_ACF = autocorr(raw_series_try, 'NumLags', lags_try);
+                    disp('DEBUG: autocorr in TRY succeeded. Class of person_box_ACF:'); disp(class(person_box_ACF)); disp('Size:'); disp(size(person_box_ACF));
+                else 
+                    disp('DEBUG: TRY block: Invalid lags calculated (-50), forcing to CATCH for N-1 lags.');
+                    error('Calculated lags for -50 are invalid, using N-1 via catch block.');
+                end
+            else 
+                 disp('DEBUG: TRY block: Series too short for autocorr (N<2), forcing to CATCH.');
+                 error('Series too short in TRY (N<2), using N-1 via catch block.');
+            end
+        catch ME_autocorr_try 
+            disp(['DEBUG: CAUGHT error/condition in TRY block autocorr. Message: ', ME_autocorr_try.message]);
+            disp('DEBUG: Trying autocorr in CATCH block (using N-1 lags if possible)');
+            temp_series_catch = person_box_height - person_box_width; 
+            N_catch = length(temp_series_catch);
+            disp(['DEBUG: CATCH block: series length = ', num2str(N_catch)]);
+
+            if N_catch >= 2 
+                lags_to_use_catch = N_catch - 1;
+                disp(['DEBUG: CATCH block: lags_to_use = ', num2str(lags_to_use_catch)]);
+                person_box_ACF = autocorr(temp_series_catch, 'NumLags', lags_to_use_catch);
+                disp('DEBUG: autocorr in CATCH succeeded. Class of person_box_ACF:'); disp(class(person_box_ACF)); disp('Size:'); disp(size(person_box_ACF));
+            else
+                disp('DEBUG: CATCH block: Series too short for autocorr (N<2).');
+                % person_box_ACF is already [], or will remain [] if try was skipped by error above
+                disp('DEBUG: CATCH block: person_box_ACF set/kept as []. Class:'); disp(class(person_box_ACF)); disp('Size:'); disp(size(person_box_ACF));
+            end
+        end
+        
+        % Defensive checks before findpeaks
+        if ~isnumeric(person_box_ACF) || (~isvector(person_box_ACF) && ~isempty(person_box_ACF))
+            disp('Warning: person_box_ACF is not a numeric vector or is not empty and not a vector. Setting to empty for findpeaks.');
+            person_box_ACF = [];
+        end
+        % Ensure it's a column vector if not empty and is a vector
+        if ~isempty(person_box_ACF) && isvector(person_box_ACF) && ~iscolumn(person_box_ACF) 
+            person_box_ACF = person_box_ACF(:);
         end
         [~,peak_locs] = findpeaks(person_box_ACF,'MinPeakDistance',25);
-        action_period = mean(diff([0 peak_locs]));
+        
+        if isempty(peak_locs)
+            action_period = NaN; % No peaks found, so period is undefined or use a default
+            disp('DEBUG: No peaks found by findpeaks. action_period set to NaN.');
+        else
+            peak_locs = peak_locs(:)'; % Ensure peak_locs is a row vector for [0 peak_locs]
+            action_period = mean(diff([0 peak_locs]));
+            disp(['DEBUG: Peaks found. action_period calculated as: ', num2str(action_period)]);
+        end
     end
     
     if strcmp(cls,'lateral lunge')

@@ -165,6 +165,7 @@ Miniconda3-latest-MacOSX-arm64.sh
 Miniconda3-latest-MacOSX-x86_64.sh
 simulated_spectrograms/
 video_meshes/
+video_meshes_old/
 Mask_RCNN/
 human mesh recovery/
 video_frames/

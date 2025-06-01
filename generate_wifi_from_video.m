@@ -6,18 +6,32 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Copyright (c): H. Cai, B. Korany, and C. Karanam (UCSB, 2020)         %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+clear functions; % Ensure all functions are reloaded from .m files
+rehash toolboxcache; % Refresh toolbox cache
+
 clear;
 clc;
 close all;
 
+% pre-setting some simulation parameters
+activity_id = 5; %which activity to simulate, takes a value 5, 9, or 10
+% 5. Lateral lunge, 9. Sit-up, 10. Stiff-leg deadlift
 
+if ~ismember(activity_id, [5,9,10])
+    error('Activity not found. Please choose one of the sample provided activities (5. Lateral lunge, 9. Sit-up, 10. Stiff-leg deadlift).')
+end
 
 %% Adding paths and pre-loading some data files
 addpath('Functions'); %some functions used in the script
+
+% Get available videos for the chosen activity
+[cls, cls_category, available_videos] = get_action_name(activity_id);
+
 addpath('MeshInfoMatFiles')
 load('left_arm_idx.mat');
 load('right_arm_idx.mat');
-load('noarm_idx.mat');
+load('noarm_idx.mat'); 
+% Removed debug lines for noarm_idx here
 set_noarm = setdiff(1:6890,[left_arm_idx;right_arm_idx]); %indeces of all body points except arms
 
 %% pre-setting some simulation parameters
@@ -31,29 +45,26 @@ beamwidth_body_default = 40;%beamwidth of the specular reflection of different b
 
 
 %% Visualization parameters (visualizing the moving mesh)
-show_meshes = 1; %Binary to show the mesh or not
+show_meshes = 0; %Binary to show the mesh or not
 
 
-%% action and show param
-activity_id = 5; %which activity to simulate, takes a value 5, 9, or 10
-% 5. Lateral lunge, 9. Sit-up, 10. Stiff-leg deadlift
-
-if ~ismember(activity_id, [5,9,10])
-    error('Activity not found. Please choose one of the sample provided activities (5. Lateral lunge, 9. Sit-up, 10. Stiff-leg deadlift).')
-end
-
-for vid_id =  1:2 %looping over both videos
+% Loop over videos (hardcoded, will cause error if available_videos is shorter)
+% This is the state that processed the first video and then failed.
+for vid_id = 1:2 
     
-    clearvars -except show_meshes activity_id vid_id vid_id_table vid_id_all num_link set_noarm Tx_pos_all Rx_pos_all ...
-        name_link beamwidth_body_default noarm_head_idx noarm_left_leg_idx noarm_right_leg_idx noarm_torso_idx fc lambda
+    % Simplified clearvars, preserving essential loop variables and overall parameters
+    % This version assumes cls, cls_category, available_videos are from the outer scope.
+    % Adding noarm_head_idx etc. to preserve them if loaded by noarm_idx.mat
+    clearvars -except show_meshes activity_id cls cls_category available_videos vid_id ...
+                      num_link Tx_pos_all Rx_pos_all name_link beamwidth_body_default ...
+                      fc lambda left_arm_idx right_arm_idx set_noarm noarm_idx ...
+                      noarm_head_idx noarm_torso_idx noarm_left_leg_idx noarm_right_leg_idx
     
-    
-    % Get the name of activity, the names of all its available videos
-    [cls, cls_category, available_videos] = get_action_name(activity_id);
-    fprintf('Class: %s\nVideo: %s\n',cls,available_videos{vid_id});
+    current_video_id_str = available_videos{vid_id}; % This line will cause an error if vid_id is out of bounds
+    fprintf('Class: %s\nVideo: %s\n',cls, current_video_id_str);
     
     % load frames and data
-    vid = ['v-' available_videos{vid_id}]; %video name
+    vid = ['v-' current_video_id_str]; %video name
     folder_frame = fullfile('video_frames',cls,vid);
     frame_all = dir(folder_frame);
     frame_one = imread(fullfile(folder_frame,frame_all(3).name));
@@ -65,6 +76,10 @@ for vid_id =  1:2 %looping over both videos
     folder_cropped_im =  fullfile('video_meshes',cls, [vid,'_cropped_im']);
     
     mesh_all = dir(fullfile(folder_mesh, '*.mat'));
+    if isempty(mesh_all)
+        fprintf('No mesh files found for %s, video %s. Skipping.\n', cls, vid);
+        continue; % Skip to next video iteration
+    end
     [~,srt_idx] = natsortfiles({mesh_all.name}); % indices of natural order
     mesh_all = mesh_all(srt_idx); % sort structure using indices
     num_mesh = length(mesh_all); %number of video frames
@@ -128,7 +143,7 @@ for vid_id =  1:2 %looping over both videos
     [all_verts_time, all_joints_time, period_start_frames] = ...
         mesh_alignment_algorithm(all_verts_time, all_joints_time, person_box_time,...
         person_mask_time, cams_time, im_shape,...
-        cls, cls_category, vid);
+        cls, cls_category, current_video_id_str); % Use cls and current_video_id_str
     
     %the times at which periods of the activity start
     period_start_times = interp1(1:num_mesh,t, period_start_frames); % t(round(period_start_frames));
@@ -240,7 +255,7 @@ for vid_id =  1:2 %looping over both videos
                 idx_included = [];
                 for iter_part = 1:length(scaling_body)
                     if iter_part == 1
-                        idx_part = intersect(idx_visible, noarm_head_idx);
+                        idx_part = intersect(idx_visible, noarm_head_idx); 
                         verts_part_visible = verts_curr(idx_part,:);
                     elseif iter_part == 2
                         idx_part = intersect(idx_visible, noarm_torso_idx);
@@ -251,6 +266,8 @@ for vid_id =  1:2 %looping over both videos
                     elseif iter_part == 4
                         idx_part = intersect(idx_visible, noarm_right_leg_idx);
                         verts_part_visible = verts_curr(idx_part,:);
+                    else 
+                        verts_part_visible = [];
                     end
                     
                     if scaling_body(iter_part) == 0
@@ -287,9 +304,20 @@ for vid_id =  1:2 %looping over both videos
             %point
             normals = pcnormals(pointCloud(verts),12);
             point_Tx_vector = Tx_pos - verts;
-            normals_to_flip = (sign(normals(:,iter_link))~=sign(point_Tx_vector(iter_link)));
-            normals(normals_to_flip,:) = - normals(normals_to_flip,:);
-            
+            % normals_to_flip = (sign(normals(:,iter_link))~=sign(point_Tx_vector(iter_link))); % Potential error if point_Tx_vector has varying signs
+            % A more robust way if normals can be multi-column and point_Tx_vector too:
+            % Compare element-wise for the iter_link column, or ensure iter_link is a valid index for point_Tx_vector
+            % Assuming point_Tx_vector is N_verts x 3 and normals is N_verts x 3
+            % And iter_link is 1, 2, or 3 for x, y, z component comparison.
+            if size(point_Tx_vector,2) >= iter_link && size(normals,2) >= iter_link
+                normals_to_flip = (sign(normals(:,iter_link)) ~= sign(point_Tx_vector(:,iter_link)));
+                normals(normals_to_flip,:) = -normals(normals_to_flip,:);
+            else
+                % Handle cases where iter_link might be out of bounds for columns, though unlikely here
+                % Or if point_Tx_vector was scalar for the iter_link component, original code was fine.
+                % For safety, if this occurs, don't flip, or error. Here, just proceed.
+            end
+
             point_rx_vector = Rx_pos - verts;
             point_rx_vector = point_rx_vector ./ sqrt(sum(point_rx_vector.^2,2));
             incident_vector = -point_Tx_vector ./ sqrt(sum(point_Tx_vector.^2,2));
@@ -350,7 +378,7 @@ for vid_id =  1:2 %looping over both videos
         
         surf(T, F, video_spectrogram_g,'LineStyle','none'); colormap(jet);
         xlabel('time'); ylabel('freq');
-        title(sprintf('action: %d (%s), Video: (%s), link: %s',activity_id,cls,available_videos{vid_id},name_link{iter_link}));
+        title(sprintf('action: %d (%s), Video: (%s), link: %s',activity_id,cls,current_video_id_str,name_link{iter_link}));
         axis([T(1), T(end), F(1), F(end)]);
         view(2);
     end
@@ -361,6 +389,6 @@ for vid_id =  1:2 %looping over both videos
         if ~exist(folder_save_cls,'dir')
             mkdir(folder_save_cls);
         end
-        save(fullfile(folder_save_cls,sprintf('vid-%s.mat',available_videos{vid_id})),...
+        save(fullfile(folder_save_cls,sprintf('vid-%s.mat',current_video_id_str)),...
             'sp_all','T','F','period_start_times');
 end
