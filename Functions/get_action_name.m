@@ -11,7 +11,7 @@ elseif action_id  == 10
     cls = 'stiff-leg deadlift';
     cls_category = 1;
     available_vid = {'4','6'};
-elif action_id == 11
+elseif action_id == 11
     cls = 'swing bench';
     cls_category = 1;
     available_vid = {'1'};

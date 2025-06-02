@@ -1,3 +1,4 @@
+function generate_wifi_from_video(activity_id_input)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% This code implements the video-to-wifi simulation pipeline of the     %%
 %% paper, "Teaching RF to sense without RF training measurements",       %%
@@ -6,19 +7,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Copyright (c): H. Cai, B. Korany, and C. Karanam (UCSB, 2020)         %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-clear functions; % Ensure all functions are reloaded from .m files
-rehash toolboxcache; % Refresh toolbox cache
 
-clear;
-clc;
-close all;
+% Ensure we're using the function argument
+activity_id = activity_id_input;
+fprintf('generate_wifi_from_video: Received activity_id = %d\n', activity_id);
 
-% pre-setting some simulation parameters
-activity_id = 5; %which activity to simulate, takes a value 5, 9, or 10
-% 5. Lateral lunge, 9. Sit-up, 10. Stiff-leg deadlift
+% clear functions; % Generally not needed/desired inside a function called this way
+% rehash toolboxcache; % Generally not needed/desired
 
-if ~ismember(activity_id, [5,9,10])
-    error('Activity not found. Please choose one of the sample provided activities (5. Lateral lunge, 9. Sit-up, 10. Stiff-leg deadlift).')
+% clear; % CANNOT use clear as it would wipe the input argument activity_id_input
+clc; % Safe
+close all; % Safe
+
+% Validate activity_id
+% 5. Lateral lunge, 9. Sit-up, 10. Stiff-leg deadlift, 11. Swing bench
+if ~ismember(activity_id, [5,9,10,11])
+    error('Activity ID %d is not recognized or supported. Please choose from [5, 9, 10, 11].', activity_id)
 end
 
 %% Adding paths and pre-loading some data files
