@@ -50,7 +50,7 @@ show_meshes = 0; %Binary to show the mesh or not
 
 % Loop over videos (hardcoded, will cause error if available_videos is shorter)
 % This is the state that processed the first video and then failed.
-for vid_id = 1:2 
+for vid_id = 1:length(available_videos)
     
     % Simplified clearvars, preserving essential loop variables and overall parameters
     % This version assumes cls, cls_category, available_videos are from the outer scope.
