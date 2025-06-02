@@ -263,7 +263,35 @@ elseif cls_category == 8
         verts(:,:,i) = verts(:,:,i) - mean(verts(hip_idx,:,i));
     end
     
-    person_box_ACF = autocorr(person_box_width,length(person_box_width)-50);
+    % Robust autocorr for person_box_width (cls_category == 8)
+    series_cat8 = person_box_width;
+    N_cat8 = length(series_cat8);
+    person_box_ACF_cat8 = []; % Initialize
+    disp(['DEBUG: cls_category=8: series length = ', num2str(N_cat8)]);
+    if N_cat8 >= 2 % Must have at least 2 points for any ACF
+        lags_desired_cat8 = N_cat8 - 50;
+        disp(['DEBUG: cls_category=8: desired lags (-50) = ', num2str(lags_desired_cat8)]);
+        if lags_desired_cat8 > 0 && lags_desired_cat8 < N_cat8
+            person_box_ACF_cat8 = autocorr(series_cat8, 'NumLags', lags_desired_cat8);
+            disp('DEBUG: cls_category=8: autocorr with -50 lags SUCCEEDED.');
+        else
+            lags_fallback_cat8 = N_cat8 - 1;
+            disp(['DEBUG: cls_category=8: -50 lags invalid, trying N-1 lags = ', num2str(lags_fallback_cat8)]);
+            if lags_fallback_cat8 > 0 % Ensure N-1 is at least 1
+                person_box_ACF_cat8 = autocorr(series_cat8, 'NumLags', lags_fallback_cat8);
+                disp('DEBUG: cls_category=8: autocorr with N-1 lags SUCCEEDED.');
+            else
+                disp('DEBUG: cls_category=8: N-1 lags also invalid (<=0). ACF set to [].');
+            end
+        end
+    else
+        disp('DEBUG: cls_category=8: Series too short for ACF. ACF set to [].');
+    end
+    if ~isempty(person_box_ACF_cat8)
+        disp(['DEBUG: cls_category=8: Final ACF class: ', class(person_box_ACF_cat8), ', size: [', num2str(size(person_box_ACF_cat8,1)), ' ', num2str(size(person_box_ACF_cat8,2)), ']']);
+    end
+    person_box_ACF = person_box_ACF_cat8; % Assign to the variable used by findpeaks
+
     [~,peak_locs] = findpeaks(person_box_ACF,'MinPeakDistance',25);
     action_period = mean(diff([0 peak_locs]));
     period_start_frames = -action_period:action_period: num_frames+action_period;
