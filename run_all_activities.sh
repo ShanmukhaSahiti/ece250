@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the activity IDs to process
-ACTIVITY_IDS=(5 9 10) # Reverted to include all defined activities
+ACTIVITY_IDS=(5 9 10 11 12) # All valid activities including lifting
 
 # Path to your MATLAB executable
 MATLAB_EXECUTABLE="/Applications/MATLAB_R2025a.app/bin/matlab"

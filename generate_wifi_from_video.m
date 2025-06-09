@@ -20,9 +20,9 @@ clc; % Safe
 close all; % Safe
 
 % Validate activity_id
-% 5. Lateral lunge, 9. Sit-up, 10. Stiff-leg deadlift, 11. Swing bench
-if ~ismember(activity_id, [5,9,10,11])
-    error('Activity ID %d is not recognized or supported. Please choose from [5, 9, 10, 11].', activity_id)
+% 5. Lateral lunge, 9. Sit-up, 10. Stiff-leg deadlift, 11. Swing bench, 12. Lifting
+if ~ismember(activity_id, [5,9,10,11,12])
+    error('Activity ID %d is not recognized or supported. Please choose from [5, 9, 10, 11, 12].', activity_id)
 end
 
 %% Adding paths and pre-loading some data files
@@ -112,14 +112,64 @@ for vid_id = 1:length(available_videos)
         
         name_parts = strsplit(mesh_all(iter_mesh).name,'_');
         
-        if isnan(str2double(name_parts{3}(end-5)))
-            t(iter_mesh) = str2double(name_parts{3}(end-4:end));
+        if strcmp(cls, 'swing bench')
+            % Handle filenames like '669-60105_cropped_im_mesh.mat'
+            if length(name_parts) >= 1
+                id_part = strsplit(name_parts{1}, '-');
+                if length(id_part) >= 2
+                    t(iter_mesh) = str2double(id_part{2});
+                else
+                    warning('Could not parse frame number from swing bench mesh filename: %s (part 1 after hyphen)', mesh_all(iter_mesh).name);
+                    t(iter_mesh) = iter_mesh; % Fallback to iteration index
+                end
+            else
+                warning('Could not parse frame number from swing bench mesh filename: %s (part 1)', mesh_all(iter_mesh).name);
+                t(iter_mesh) = iter_mesh; % Fallback to iteration index
+            end
+        elseif strcmp(cls, 'lifting')
+             % Handle filenames like '2502-2_70352_cropped_im_mesh.mat'
+             if length(name_parts) >= 2
+                 t(iter_mesh) = str2double(name_parts{2});
+             else
+                 warning('Could not parse frame number from lifting mesh filename: %s', mesh_all(iter_mesh).name);
+                 t(iter_mesh) = iter_mesh; % Fallback
+             end
         else
-            t(iter_mesh) = str2double(name_parts{3}(end-5:end));
+            % Original parsing logic for other activities
+            if length(name_parts) >= 3 && length(name_parts{3}) >= 6 % Basic check
+                if isnan(str2double(name_parts{3}(end-5)))
+                    t(iter_mesh) = str2double(name_parts{3}(end-4:end));
+                else
+                    t(iter_mesh) = str2double(name_parts{3}(end-5:end));
+                end
+            else
+                warning('Could not parse frame number from mesh filename: %s using original logic', mesh_all(iter_mesh).name);
+                t(iter_mesh) = iter_mesh; % Fallback to iteration index
+            end
         end
         
-        load(fullfile(folder_box,...
-            [name_parts{1},'_',name_parts{2},'_',name_parts{3},'_mask.mat']));
+        % For swing bench: name_parts{1} is like '669-60105'. We need to ensure the box filename matches.
+        % The mask files are named: 669-60105_cropped_im_mask.mat
+        if strcmp(cls, 'swing bench') || strcmp(cls, 'lifting')
+            % The mesh filenames are like '669-60105_cropped_im_mesh.mat'
+            % or '2502-2_70340_cropped_im_mesh.mat'
+            % The mask files are simpler: '669-60105_mask.mat' or '2502-2_70340_mask.mat'
+            
+            % We get the base name from the mesh file: e.g., '669-60105_cropped_im_mesh'
+            [~, mesh_name_base, ~] = fileparts(mesh_all(iter_mesh).name);
+            % It should be '669-60105' for swing bench or '2502-2_70340' for lifting
+            
+            % The python script creates mesh file names like '..._cropped_im_mesh.mat'
+            % and mask file names like '..._mask.mat'.
+            % So we need to remove '_cropped_im_mesh' and add '_mask.mat'
+            
+            box_filename_base = strrep(mesh_name_base, '_cropped_im_mesh', '');
+            box_filename_construct = [box_filename_base, '_mask.mat'];
+        else
+            % Original logic for box filename
+            box_filename_construct = [name_parts{1},'_',name_parts{2},'_',name_parts{3}, '_mask.mat'];
+        end
+        load(fullfile(folder_box, box_filename_construct));
         person_box = double(person_box);
         person_box_time(:,iter_mesh) = person_box';
         % distance of box from bottom
@@ -206,10 +256,12 @@ for vid_id = 1:length(available_videos)
     fprintf('Simulating the WiFi signal\n');
     % Which parts to include in the simulation? Use only the mostly moving
     % ones
-    if ismember(activity_id,[9,10]) 
+    if ismember(activity_id,[9,10,12]) 
         scaling_body = [1,1,0,0];
     elseif ismember(activity_id,[5]) 
         scaling_body = [1,1,1,1];
+    elseif ismember(activity_id, [11])
+        scaling_body = [1,1,1,1]; % Assuming swing bench uses all parts
     end
     
     % preallocate variables to store spectrograms
