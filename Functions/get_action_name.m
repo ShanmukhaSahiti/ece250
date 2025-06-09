@@ -15,6 +15,10 @@ elseif action_id == 11
     cls = 'swing bench';
     cls_category = 1;
     available_vid = {'1'};
+elseif action_id == 12
+    cls = 'lifting';
+    cls_category = 1; % Same category as deadlift
+    available_vid = {'2502-2'};
 else
     error('Unknown action_id: %d', action_id);
 end
