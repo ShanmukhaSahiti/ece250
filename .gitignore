@@ -176,3 +176,5 @@ video_frames/
 # But for now, let's assume all .mat in data folders are excluded.
 # If MeshInfoMatFiles contains source data and not generated, remove it from here.
 MeshInfoMatFiles/*.mat 
+Ubicom20_KoranyKaranamCaiMostofi.pdf
+ucf action/

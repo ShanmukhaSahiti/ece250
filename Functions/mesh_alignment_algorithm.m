@@ -105,7 +105,11 @@ if cls_category == 1 || cls_category == 2 %|| cls_category == 3
              disp(['DEBUG: cls_category=1: Final ACF class: ', class(person_box_ACF), ', size: [', num2str(size(person_box_ACF,1)), ' ', num2str(size(person_box_ACF,2)), ']']);
         end
 
-        [~,peak_locs] = findpeaks(person_box_ACF,'MinPeakDistance',25);
+        min_peak_dist = floor(length(person_box_ACF) / 2) - 1;
+        if min_peak_dist < 1
+            min_peak_dist = 1;
+        end
+        [~,peak_locs] = findpeaks(person_box_ACF,'MinPeakDistance',min_peak_dist);
         
         if isempty(peak_locs)
             action_period = NaN; % No peaks found, so period is undefined or use a default
@@ -173,7 +177,11 @@ if cls_category == 1 || cls_category == 2 %|| cls_category == 3
         if ~isempty(person_box_ACF) && isvector(person_box_ACF) && ~iscolumn(person_box_ACF) 
             person_box_ACF = person_box_ACF(:);
         end
-        [~,peak_locs] = findpeaks(person_box_ACF,'MinPeakDistance',25);
+        min_peak_dist = floor(length(person_box_ACF) / 2) - 1;
+        if min_peak_dist < 1
+            min_peak_dist = 1;
+        end
+        [~,peak_locs] = findpeaks(person_box_ACF,'MinPeakDistance',min_peak_dist);
         
         if isempty(peak_locs)
             action_period = NaN; % No peaks found, so period is undefined or use a default
@@ -292,7 +300,11 @@ elseif cls_category == 8
     end
     person_box_ACF = person_box_ACF_cat8; % Assign to the variable used by findpeaks
 
-    [~,peak_locs] = findpeaks(person_box_ACF,'MinPeakDistance',25);
+    min_peak_dist = floor(length(person_box_ACF) / 2) - 1;
+    if min_peak_dist < 1
+        min_peak_dist = 1;
+    end
+    [~,peak_locs] = findpeaks(person_box_ACF,'MinPeakDistance',min_peak_dist);
     action_period = mean(diff([0 peak_locs]));
     period_start_frames = -action_period:action_period: num_frames+action_period;
     [frameshift, frameshift_loc]  = min(abs(lying_frame - period_start_frames));
