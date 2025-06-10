@@ -177,3 +177,4 @@ video_frames/
 # If MeshInfoMatFiles contains source data and not generated, remove it from here.
 MeshInfoMatFiles/*.mat 
 Ubicom20_KoranyKaranamCaiMostofi.pdf
+ucf action/
