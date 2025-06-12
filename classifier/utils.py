@@ -68,56 +68,155 @@ def extract_repetition_features(spectrograms, time_vector, freq_vector):
     return all_features
 
 
-def load_data():
-    """
-    Loads .mat files, segments them into repetitions, extracts features
-    for each repetition, and returns the features and labels.
-    """
-    # Get the absolute path to the directory containing this script (utils.py)
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    # Construct the absolute path to the spectrograms directory
-    base_dir = os.path.join(script_dir, '..', 'simulated_spectrograms')
+def load_data(data_dir):
+    """Load and process all .mat files from the data directory."""
+    all_features = []
+    all_labels = []
     
-    X = []
-    y = []
+    # Get all activity folders
+    activity_folders = [f for f in os.listdir(data_dir) if os.path.isdir(os.path.join(data_dir, f))]
+    print(f"\nFound activity folders: {activity_folders}")
     
-    activity_folders = [f for f in glob.glob(os.path.join(base_dir, '*')) if os.path.isdir(f)]
-    
-    print(f"Found activity folders: {[os.path.basename(f) for f in activity_folders]}")
-
-    for activity_path in activity_folders:
-        activity_label = os.path.basename(activity_path)
-        mat_files = glob.glob(os.path.join(activity_path, '*.mat'))
+    for activity in activity_folders:
+        activity_path = os.path.join(data_dir, activity)
+        mat_files = [f for f in os.listdir(activity_path) if f.endswith('.mat')]
+        print(f"\nProcessing activity '{activity}': Found {len(mat_files)} .mat files.")
         
+        processed_files = 0
         for mat_file in mat_files:
+            file_path = os.path.join(activity_path, mat_file)
+            print(f"\nDebug - File: {mat_file}")
+            
             try:
-                data = loadmat(mat_file)
-                sp_all = data['sp_all']        # Spectrograms for 3 links
-                T = data['T'].flatten()        # Time vector
-                F = data['F'].flatten()        # Frequency vector
-                period_starts = data['period_start_times'].flatten()
+                # Load the .mat file
+                data = loadmat(file_path)
+                print(f"Available keys: {list(data.keys())}")
+                
+                # Check for required keys
+                required_keys = ['T', 'F', 'sp_all']
+                missing_keys = [key for key in required_keys if key not in data]
+                if missing_keys:
+                    print(f"  - WARNING: Missing required keys: {missing_keys}")
+                    continue
+                
+                # Extract data
+                T = data['T'].flatten()  # Time points
+                F = data['F'].flatten()  # Frequency points
+                sp_all = data['sp_all']  # Spectrogram data
+                
+                # The .mat files store sp_all as a cell array, which loads as an object array.
+                # We need to handle this structure.
+                if sp_all.dtype == 'object':
+                    # If it's an object array, we assume it's a list of spectrograms (one for each link).
+                    # We'll extract them into a proper 3D numpy array.
+                    # Assuming dimensions are (time, freq) for each cell.
+                    # Let's find the max dimensions to create a padded numpy array.
+                    max_time = 0
+                    max_freq = 0
+                    for i in range(sp_all.shape[0]):
+                         for j in range(sp_all.shape[1]):
+                            if sp_all[i,j] is not None and sp_all[i,j].ndim > 0:
+                                if sp_all[i,j].shape[0] > max_time:
+                                    max_time = sp_all[i,j].shape[0]
+                                if sp_all[i,j].shape[1] > max_freq:
+                                    max_freq = sp_all[i,j].shape[1]
+                    
+                    if max_time == 0 or max_freq == 0:
+                        print("  - WARNING: Found object array for sp_all, but it's empty.")
+                        continue # Skip this file
 
-                # Segment the data into repetitions
+                    # Create a new 3D array and fill it
+                    num_links = sp_all.shape[0] * sp_all.shape[1]
+                    proper_sp_all = np.zeros((max_time, max_freq, num_links))
+                    
+                    link_k = 0
+                    for i in range(sp_all.shape[0]):
+                        for j in range(sp_all.shape[1]):
+                            if sp_all[i,j] is not None and sp_all[i,j].ndim > 0:
+                                t_dim, f_dim = sp_all[i,j].shape
+                                proper_sp_all[0:t_dim, 0:f_dim, link_k] = sp_all[i,j]
+                            link_k += 1
+                    sp_all = proper_sp_all
+
+                print(f"  Shapes - sp_all: {sp_all.shape}, T: {T.shape}, F: {F.shape}")
+                
+                # Handle period_start_times - Per user request, always treat as a single repetition
+                period_starts = np.array([T[0]])
+                
+                # Process each repetition
                 for i in range(len(period_starts)):
-                    start_time = period_starts[i]
-                    end_time = period_starts[i+1] if i + 1 < len(period_starts) else T[-1]
+                    start_idx = np.where(T >= period_starts[i])[0][0]
+                    end_idx = len(T) # Always go to the end of the signal
                     
-                    # Find indices corresponding to this repetition's time window
-                    rep_indices = np.where((T >= start_time) & (T <= end_time))[0]
-                    
-                    if len(rep_indices) < 2: # Need at least 2 time steps for a repetition
+                    # Extract the repetition segment
+                    if end_idx - start_idx < 10:  # Minimum points threshold
+                        print(f"  - WARNING: Not enough points in repetition {i+1} (found {end_idx - start_idx})")
                         continue
-                        
-                    # Extract the spectrograms for this repetition by slicing each link's spectrogram
-                    rep_sps = np.array([sp_all[i, 0][:, rep_indices] for i in range(sp_all.shape[0])])
-                    rep_time_vector = T[rep_indices]
                     
-                    # Extract the 33 features for this repetition
-                    features = extract_repetition_features(rep_sps, rep_time_vector, F)
-                    X.append(features)
-                    y.append(activity_label)
+                    # Prepare list of spectrograms for feature extraction
+                    spectrogram_list = []
+                    if sp_all.ndim == 3:
+                        # We have multiple links, split them
+                        for link_idx in range(sp_all.shape[2]):
+                            spectrogram_list.append(sp_all[start_idx:end_idx, :, link_idx])
+                    else:
+                        # We have a single 2D spectrogram
+                        sp_segment = sp_all[start_idx:end_idx, :]
+                        # The feature extractor expects 3 links, so we can duplicate the single one
+                        spectrogram_list = [sp_segment] * 3
 
+                    # Extract features
+                    features = extract_repetition_features(spectrogram_list, T[start_idx:end_idx], F)
+                    if features is not None:
+                        all_features.append(features)
+                        all_labels.append(activity)
+                        print(f"  - Successfully processed repetition {i+1}")
+                
+                processed_files += 1
+                
             except Exception as e:
-                print(f"Could not process file {mat_file}: {e}")
+                print(f"  - ERROR processing file: {str(e)}")
+                continue
+        
+        print(f"Finished '{activity}': Successfully processed {processed_files}/{len(mat_files)} files.")
+    
+    if not all_features:
+        raise ValueError("No valid features were extracted from any files")
+    
+    print("\nFinalizing data arrays...")
+    X = np.array(all_features)
+    y = np.array(all_labels)
+    print(f"Data loaded: {len(X)} samples, {X.shape[1]} features each.")
+    
+    return X, y
 
-    return np.array(X), np.array(y) 
+def extract_features(sp, F):
+    """Extract features from a spectrogram segment."""
+    try:
+        # Ensure sp is 2D
+        if sp.ndim == 3:
+            sp = np.mean(sp, axis=2)  # Average across channels
+        
+        # Calculate quantile histograms
+        quantiles_to_calc = [0.25, 0.5, 0.75]
+        quantile_features = []
+        for q in quantiles_to_calc:
+            quantile_val = np.quantile(sp, q)
+            quantile_features.append(quantile_val)
+        
+        # Calculate temporal asymmetry
+        mid_point = sp.shape[0] // 2
+        first_half_max = np.max(sp[:mid_point])
+        second_half_max = np.max(sp[mid_point:])
+        asymmetry_feature = 1 if abs(first_half_max - second_half_max) > 10 else 0
+        
+        # Calculate duration feature
+        duration = sp.shape[0]
+        
+        # Combine all features
+        features = quantile_features + [asymmetry_feature, duration]
+        return features
+        
+    except Exception as e:
+        print(f"  - ERROR extracting features: {str(e)}")
+        return None 
