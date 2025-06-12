@@ -190,6 +190,97 @@ def load_data(data_dir):
     
     return X, y
 
+def load_data_from_files(file_paths):
+    """Load and process a list of .mat files."""
+    all_features = []
+    all_labels = []
+    
+    for file_path in file_paths:
+        try:
+            # Extract activity name from path (assuming path is like .../activity_name/file.mat)
+            activity = os.path.basename(os.path.dirname(file_path))
+            mat_file = os.path.basename(file_path)
+            print(f"\nProcessing file: {mat_file} for activity: {activity}")
+
+            # Load the .mat file
+            data = loadmat(file_path)
+            
+            # Check for required keys
+            required_keys = ['T', 'F', 'sp_all']
+            missing_keys = [key for key in required_keys if key not in data]
+            if missing_keys:
+                print(f"  - WARNING: Missing required keys: {missing_keys}")
+                continue
+            
+            # Extract data
+            T = data['T'].flatten()
+            F = data['F'].flatten()
+            sp_all = data['sp_all']
+            
+            # The .mat files store sp_all as a cell array, which loads as an object array.
+            if sp_all.dtype == 'object':
+                max_time = 0
+                max_freq = 0
+                for i in range(sp_all.shape[0]):
+                    for j in range(sp_all.shape[1]):
+                        if sp_all[i,j] is not None and sp_all[i,j].ndim > 0:
+                            if sp_all[i,j].shape[0] > max_time:
+                                max_time = sp_all[i,j].shape[0]
+                            if sp_all[i,j].shape[1] > max_freq:
+                                max_freq = sp_all[i,j].shape[1]
+                
+                if max_time == 0 or max_freq == 0:
+                    print("  - WARNING: Found object array for sp_all, but it's empty.")
+                    continue
+
+                num_links = sp_all.shape[0] * sp_all.shape[1]
+                proper_sp_all = np.zeros((max_time, max_freq, num_links))
+                
+                link_k = 0
+                for i in range(sp_all.shape[0]):
+                    for j in range(sp_all.shape[1]):
+                        if sp_all[i,j] is not None and sp_all[i,j].ndim > 0:
+                            t_dim, f_dim = sp_all[i,j].shape
+                            proper_sp_all[0:t_dim, 0:f_dim, link_k] = sp_all[i,j]
+                        link_k += 1
+                sp_all = proper_sp_all
+
+            # Always treat as a single repetition
+            period_starts = np.array([T[0]])
+            
+            for i in range(len(period_starts)):
+                start_idx = 0
+                end_idx = len(T)
+                
+                if end_idx - start_idx < 10:
+                    print(f"  - WARNING: Not enough points in signal.")
+                    continue
+                
+                spectrogram_list = []
+                if sp_all.ndim == 3:
+                    for link_idx in range(sp_all.shape[2]):
+                        spectrogram_list.append(sp_all[start_idx:end_idx, :, link_idx])
+                else:
+                    sp_segment = sp_all[start_idx:end_idx, :]
+                    spectrogram_list = [sp_segment] * 3
+
+                features = extract_repetition_features(spectrogram_list, T[start_idx:end_idx], F)
+                if features is not None:
+                    all_features.append(features)
+                    all_labels.append(activity)
+            
+        except Exception as e:
+            print(f"  - ERROR processing file {file_path}: {str(e)}")
+            continue
+            
+    if not all_features:
+        # Return empty arrays if no features were extracted
+        return np.array([]), np.array([])
+    
+    X = np.array(all_features)
+    y = np.array(all_labels)
+    return X, y
+
 def extract_features(sp, F):
     """Extract features from a spectrogram segment."""
     try:
