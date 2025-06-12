@@ -1,77 +1,94 @@
-import matplotlib.pyplot as plt
-import seaborn as sns
+import os
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.model_selection import KFold
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, confusion_matrix
 from imblearn.over_sampling import SMOTE
+import matplotlib.pyplot as plt
+import seaborn as sns
 from utils import load_data
 
-def main():
-    # Load data and extract features based on the paper's methodology
-    print("Loading data and extracting features per repetition...")
-    X, y = load_data()
+def train_classifier():
+    # Get the absolute path to the spectrograms directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_dir = os.path.join(script_dir, '..', 'simulated_spectrograms')
     
-    if X.shape[0] == 0:
-        print("No data was loaded. Please check the 'simulated_spectrograms' directory and the .mat files.")
-        return
-
-    print(f"Data loaded. Found {X.shape[0]} repetitions (samples) with {X.shape[1]} features each.")
+    # Load and preprocess the data
+    print("Loading data and extracting features...")
+    X, y = load_data(data_dir)
     
-    # Encode labels
-    le = LabelEncoder()
-    y_encoded = le.fit_transform(y)
+    # Initialize 5-fold cross-validation
+    kf = KFold(n_splits=5, shuffle=True, random_state=42)
+    fold_accuracies = []
     
-    # Split data into training and testing sets
-    X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size=0.3, random_state=42, stratify=y_encoded)
+    print("\nStarting 5-fold cross-validation...")
     
-    # --- Dynamically handle SMOTE for small datasets ---
-    # Find the number of samples in the smallest class
-    min_class_count = np.min(np.bincount(y_train))
-    
-    # SMOTE requires k_neighbors < n_samples in the smallest class.
-    # We only apply SMOTE if the smallest class has at least 2 samples.
-    if min_class_count > 1:
-        # Set k_neighbors to be one less than the number of samples in the smallest class
-        k_neighbors = min_class_count - 1
-        print(f"\nSmallest class has {min_class_count} samples. Setting SMOTE k_neighbors to {k_neighbors}.")
-
-        # Apply SMOTE to the training data to handle class imbalance
+    for fold, (train_idx, test_idx) in enumerate(kf.split(X), 1):
+        print(f"\n--- Fold {fold}/5 ---")
+        
+        # Split the data
+        X_train, X_test = X[train_idx], X[test_idx]
+        y_train, y_test = y[train_idx], y[test_idx]
+        
+        # Print class distribution before SMOTE
+        unique_classes, class_counts = np.unique(y_train, return_counts=True)
+        print(f"Class distribution before SMOTE: {class_counts}")
+        
+        # Apply SMOTE to balance the training data
+        # Ensure k_neighbors is less than the number of samples in the smallest class
+        min_class_count = np.min(class_counts)
+        k_neighbors = min(5, min_class_count - 1) if min_class_count > 1 else 1
+        
         smote = SMOTE(random_state=42, k_neighbors=k_neighbors)
-        X_train, y_train = smote.fit_resample(X_train, y_train)
-        print(f"Shape of training data after SMOTE: {X_train.shape}")
-    else:
-        print(f"\nSkipping SMOTE because the smallest class has only {min_class_count} sample(s).")
-
-    # Scale features AFTER resampling to avoid data leakage
-    scaler = StandardScaler()
-    X_train_scaled = scaler.fit_transform(X_train)
-    X_test_scaled = scaler.transform(X_test)
+        X_train_balanced, y_train_balanced = smote.fit_resample(X_train, y_train)
+        
+        # Print class distribution after SMOTE
+        unique_classes, class_counts = np.unique(y_train_balanced, return_counts=True)
+        print(f"Class distribution after SMOTE: {class_counts}")
+        
+        # Train the classifier
+        clf = LogisticRegression(max_iter=1000, multi_class='multinomial')
+        clf.fit(X_train_balanced, y_train_balanced)
+        
+        # Evaluate on test set
+        accuracy = clf.score(X_test, y_test)
+        fold_accuracies.append(accuracy)
+        print(f"Fold {fold} Accuracy: {accuracy:.4f}")
     
-    # Train a Logistic Regression (Linear) classifier
-    print("\nTraining LogisticRegression classifier...")
-    clf = LogisticRegression(multi_class='ovr', solver='lbfgs', max_iter=1000, random_state=42)
-    clf.fit(X_train_scaled, y_train)
-    print("Training complete.")
+    # Print cross-validation summary
+    print("\n--- Cross-Validation Summary ---")
+    mean_accuracy = np.mean(fold_accuracies)
+    std_accuracy = np.std(fold_accuracies)
+    print(f"Mean Accuracy: {mean_accuracy:.4f} (+/- {std_accuracy:.4f})")
     
-    # Evaluate the model
-    print("\nEvaluating model performance on the original test set...")
-    y_pred = clf.predict(X_test_scaled)
+    # Train final model on all data
+    print("\nTraining final model on all data...")
+    unique_classes, class_counts = np.unique(y, return_counts=True)
+    min_class_count = np.min(class_counts)
+    k_neighbors = min(5, min_class_count - 1) if min_class_count > 1 else 1
+    smote = SMOTE(random_state=42, k_neighbors=k_neighbors)
+    X_balanced, y_balanced = smote.fit_resample(X, y)
+    final_clf = LogisticRegression(max_iter=1000, multi_class='multinomial')
+    final_clf.fit(X_balanced, y_balanced)
+    
+    # Get predictions for all data
+    y_pred = final_clf.predict(X)
     
     # Print classification report
-    print("\nClassification Report:")
-    print(classification_report(y_test, y_pred, target_names=le.classes_, zero_division=0))
+    print("\nOverall Classification Report (from all folds):")
+    print(classification_report(y, y_pred))
     
     # Plot confusion matrix
-    print("Displaying confusion matrix...")
-    cm = confusion_matrix(y_test, y_pred, labels=le.transform(le.classes_))
+    print("\nDisplaying overall confusion matrix...")
+    cm = confusion_matrix(y, y_pred)
     plt.figure(figsize=(10, 8))
-    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=le.classes_, yticklabels=le.classes_)
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+                xticklabels=final_clf.classes_,
+                yticklabels=final_clf.classes_)
     plt.title('Confusion Matrix')
-    plt.ylabel('Actual')
-    plt.xlabel('Predicted')
+    plt.ylabel('True Label')
+    plt.xlabel('Predicted Label')
     plt.show()
 
-if __name__ == '__main__':
-    main() 
+if __name__ == "__main__":
+    train_classifier() 
