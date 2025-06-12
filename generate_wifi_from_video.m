@@ -20,9 +20,9 @@ clc; % Safe
 close all; % Safe
 
 % Validate activity_id
-% 11. Swing bench, 12. Lifting, 13. Diving-Side, 14. Golf-Swing-Side, 15. Kicking-Front
-if ~ismember(activity_id, [11, 12, 13, 14, 15])
-    error('Activity ID %d is not recognized or supported. Please choose from [11, 12, 13, 14, 15].', activity_id)
+% 11. Swing bench, 12. Lifting, 13. Diving-Side, 14. Golf-Swing-Side, 15. Kicking-Front, 16. run-side, 17. skateboarding-front, 18. walk-front
+if ~ismember(activity_id, [11, 12, 13, 14, 15, 16, 17, 18])
+    error('Activity ID %d is not recognized or supported. Please choose from [11, 12, 13, 14, 15, 16, 17, 18].', activity_id)
 end
 
 %% Adding paths and pre-loading some data files
@@ -71,8 +71,11 @@ for vid_id = 1:length(available_videos)
     end
 
     folder_frame = fullfile('video_frames',cls,vid);
-    frame_all = dir(folder_frame);
-    frame_one = imread(fullfile(folder_frame,frame_all(3).name));
+    frame_all = dir(fullfile(folder_frame, '*.jpg')); % Get only .jpg files
+    if isempty(frame_all)
+        error('The directory "%s" does not contain any image files. Please ensure it is populated correctly.', folder_frame);
+    end
+    frame_one = imread(fullfile(folder_frame,frame_all(1).name)); % Read the first .jpg file
     [h_frame,w_frame,~] = size(frame_one); % just to get image size here and nothing else
     
     im_shape = [h_frame,w_frame];
@@ -190,18 +193,40 @@ for vid_id = 1:length(available_videos)
         warning('Could not determine a valid period for activity %d, video %s. Skipping interpolation and smoothing.', activity_id, current_video_id_str);
         tq = t; % Use original time vector
         ts = mean(diff(tq)); % Calculate ts from the original time vector
-        if isnan(ts) || isinf(ts) || ts == 0
+        if isnan(ts) || isinf(ts) || ts <= 0 || floor(0.4/ts) < 1
             ts = 1/30; % Fallback to a default if calculation fails
         end
     else
         % interpolating mesh to uniform time samples and smoothing
         ts = 0.005;
         tq = 0:ts:t(end);
-        [vv, ~,tt] = size(all_verts_time);
-        all_verts_time2 = reshape(all_verts_time,[vv*3 tt]);
-        all_verts_time2 = interp1(t,all_verts_time2',tq,'spline');
-        all_verts_time = reshape(all_verts_time2',[vv 3 length(tq)]);
-        all_verts_time = smoothdata(all_verts_time,3,'movmean',80);
+        
+        % Ensure time vector is unique before interpolation
+        [t_unique, ia, ~] = unique(t);
+        if length(t_unique) < length(t)
+            warning('Duplicate timestamps detected in video %s. Using unique timestamps for interpolation.', current_video_id_str);
+            verts_data_for_interp = all_verts_time(:,:,ia);
+            time_for_interp = t_unique;
+        else
+            verts_data_for_interp = all_verts_time;
+            time_for_interp = t;
+        end
+        
+        % Check for enough points for spline interpolation
+        if length(time_for_interp) < 4
+            warning('Not enough unique timestamps (%d) for spline interpolation in video %s. Skipping interpolation.', length(time_for_interp), current_video_id_str);
+            tq = t; % Revert to original time vector
+            ts = mean(diff(tq));
+            if isnan(ts) || isinf(ts) || ts == 0
+                ts = 1/30; % Fallback
+            end
+        else
+            [vv, ~,tt] = size(verts_data_for_interp);
+            all_verts_time2 = reshape(verts_data_for_interp,[vv*3 tt]);
+            all_verts_time2 = interp1(time_for_interp,all_verts_time2',tq,'spline');
+            all_verts_time = reshape(all_verts_time2',[vv 3 length(tq)]);
+            all_verts_time = smoothdata(all_verts_time,3,'movmean',80);
+        end
     end
         
     
@@ -239,7 +264,7 @@ for vid_id = 1:length(available_videos)
     % Which parts to include in the simulation?
     if ismember(activity_id, [12]) % lifting
         scaling_body = [1,1,0,0];
-    elseif ismember(activity_id, [11, 13, 14, 15]) % swing bench & new activities
+    elseif ismember(activity_id, [11, 13, 14, 15, 16, 17, 18]) % swing bench & new activities
         scaling_body = [1,1,1,1];
     end
     
@@ -301,17 +326,21 @@ for vid_id = 1:length(available_videos)
                     end
                     
                     if do_interp(iter_link,iter_part) == 1
-                        min_x = min(verts_part_visible(:,1));
-                        max_x = max(verts_part_visible(:,1));
-                        min_y = min(verts_part_visible(:,2));
-                        max_y = max(verts_part_visible(:,2));
-                        
-                        res = res_interp(iter_part);
-                        [xq,yq] = meshgrid(min_x:res:max_x, min_y:res:max_y);
-                        zq = griddata(verts_part_visible(:,1),verts_part_visible(:,2),verts_part_visible(:,3),xq,yq);
-                        
-                        idx_valid = find(~isnan(zq(:)));
-                        verts_part_visible = [verts_part_visible;[xq(idx_valid),yq(idx_valid),zq(idx_valid)]];
+                        if size(verts_part_visible,1) > 3 % Check for enough points for triangulation
+                            min_x = min(verts_part_visible(:,1));
+                            max_x = max(verts_part_visible(:,1));
+                            min_y = min(verts_part_visible(:,2));
+                            max_y = max(verts_part_visible(:,2));
+                            
+                            res = res_interp(iter_part);
+                            [xq,yq] = meshgrid(min_x:res:max_x, min_y:res:max_y);
+                            zq = griddata(verts_part_visible(:,1),verts_part_visible(:,2),verts_part_visible(:,3),xq,yq);
+                            
+                            idx_valid = find(~isnan(zq(:)));
+                            verts_part_visible = [verts_part_visible;[xq(idx_valid),yq(idx_valid),zq(idx_valid)]];
+                        else
+                            warning('Skipping interpolation for part %d due to insufficient points (%d).', iter_part, size(verts_part_visible,1));
+                        end
                     end
                     
                     verts = [verts;verts_part_visible];
