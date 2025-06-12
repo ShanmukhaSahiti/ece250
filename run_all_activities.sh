@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Define the activity IDs to process
-ACTIVITY_IDS=(11 12 13 14 15) # All valid activities including lifting
+# This script runs the MATLAB spectrogram generation for a list of activities.
+
+# Define the list of activity IDs to process
+ACTIVITY_IDS=(11 12 13 14 15 16 17 18)
 
 # Path to your MATLAB executable
 MATLAB_EXECUTABLE="/Applications/MATLAB_R2025a.app/bin/matlab"

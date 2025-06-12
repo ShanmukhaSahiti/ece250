@@ -1,470 +1,681 @@
-Starting MATLAB batch processing at Tue Jun 10 01:08:22 PDT 2025
-Processing activities: 13 14 15
+Starting MATLAB batch processing at Wed Jun 11 17:07:32 PDT 2025
+Processing activities: 17
 -------------------------------------------------
-generate_wifi_from_video: Received activity_id = 13
-Class: Diving-Side
+generate_wifi_from_video: Received activity_id = 17
+Class: skateboarding-front
 Video: 001
 Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 55
-DEBUG: cls_category=1: desired lags (-50) = 5
+[Warning: Could not parse frame number from mesh filename:
+708-75070_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75071_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75072_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75073_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75074_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75075_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75076_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75077_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75078_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75079_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75080_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75081_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75082_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75083_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75084_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75085_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75086_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75087_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75088_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75089_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75090_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75091_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75092_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75093_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75094_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75095_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75096_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75097_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75098_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75099_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75100_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75101_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75102_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75103_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75104_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75105_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75106_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75107_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75108_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75109_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75110_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75111_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75112_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75113_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75114_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75115_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75116_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75117_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75118_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75119_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75120_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75121_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75122_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75123_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75124_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75125_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75126_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75127_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75128_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75129_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75130_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75131_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75132_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75133_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75134_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75135_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75136_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75137_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75138_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-75139_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
 DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 6]
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
 DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 13, video 001.
+[Warning: Could not determine a valid period for activity 17, video 001.
 Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
+[> In generate_wifi_from_video (line 193)] 
 Simulating the WiFi signal
 Generating the WiFi Signal at link: x ...
 Generating the spectrogram ...
 Generating the WiFi Signal at link: y ...
 Generating the spectrogram ...
 Generating the WiFi Signal at link: z ...
-[Warning: Insufficient number of data points to create a triangulation-based
-interpolant.] 
-[> In griddata>useScatteredInterp (line 183)
-In griddata (line 122)
-In generate_wifi_from_video (line 311)] 
 Generating the spectrogram ...
-Class: Diving-Side
+Class: skateboarding-front
 Video: 002
 Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 55
-DEBUG: cls_category=1: desired lags (-50) = 5
+[Warning: Could not parse frame number from mesh filename:
+708-77009_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77010_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77011_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77012_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77013_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77014_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77015_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77016_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77017_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77018_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77019_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77020_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77021_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77022_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77023_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77024_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77025_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77026_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77027_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77028_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77029_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77030_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77031_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77032_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77033_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77034_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77035_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77036_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77037_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77038_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77039_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77040_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77041_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77042_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77043_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77044_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77045_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77046_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77047_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77048_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77049_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77050_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77051_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77052_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77053_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77054_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77055_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77056_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77057_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77058_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77059_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77060_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77061_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77062_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77063_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77064_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77065_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77066_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77067_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77068_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77069_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77070_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77071_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77072_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77073_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77074_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77075_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77076_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77077_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+708-77078_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
 DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 6]
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
 DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 13, video 002.
+[Warning: Could not determine a valid period for activity 17, video 002.
 Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
+[> In generate_wifi_from_video (line 193)] 
 Simulating the WiFi signal
 Generating the WiFi Signal at link: x ...
 Generating the spectrogram ...
 Generating the WiFi Signal at link: y ...
 Generating the spectrogram ...
 Generating the WiFi Signal at link: z ...
-[Warning: Insufficient number of data points to create a triangulation-based
-interpolant.] 
-[> In griddata>useScatteredInterp (line 183)
-In griddata (line 122)
-In generate_wifi_from_video (line 311)] 
-[Warning: Insufficient number of data points to create a triangulation-based
-interpolant.] 
-[> In griddata>useScatteredInterp (line 183)
-In griddata (line 122)
-In generate_wifi_from_video (line 311)] 
 Generating the spectrogram ...
-Class: Diving-Side
+Class: skateboarding-front
 Video: 003
 Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 55
-DEBUG: cls_category=1: desired lags (-50) = 5
+[Warning: Could not parse frame number from mesh filename:
+711-66044_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66045_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66046_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66047_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66048_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66049_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66050_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66051_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66052_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66053_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66054_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66055_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66056_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66057_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66058_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66059_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66060_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66061_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66062_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66063_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66064_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66065_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66066_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66067_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66068_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66069_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66070_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66071_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66072_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66073_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66074_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66075_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66076_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66077_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66078_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66079_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66080_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66081_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66082_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66083_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66084_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66085_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66086_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66087_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66088_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66089_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66090_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66091_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66092_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66093_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66094_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66095_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66096_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66097_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66098_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66099_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66100_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66101_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66102_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66103_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66104_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66105_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66106_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66107_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66108_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66109_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66110_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66111_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66112_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+711-66113_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
 DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 6]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 13, video 003.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-[Warning: Insufficient number of data points to create a triangulation-based
-interpolant.] 
-[> In griddata>useScatteredInterp (line 183)
-In griddata (line 122)
-In generate_wifi_from_video (line 311)] 
-Generating the spectrogram ...
-Class: Diving-Side
-Video: 004
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 55
-DEBUG: cls_category=1: desired lags (-50) = 5
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 6]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 13, video 004.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Diving-Side
-Video: 005
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 55
-DEBUG: cls_category=1: desired lags (-50) = 5
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 6]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 13, video 005.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-[Warning: Insufficient number of data points to create a triangulation-based
-interpolant.] 
-[> In griddata>useScatteredInterp (line 183)
-In griddata (line 122)
-In generate_wifi_from_video (line 311)] 
-Generating the spectrogram ...
-Class: Diving-Side
-Video: 006
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 55
-DEBUG: cls_category=1: desired lags (-50) = 5
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 6]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 13, video 006.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Diving-Side
-Video: 007
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 53
-DEBUG: cls_category=1: desired lags (-50) = 3
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 4]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 13, video 007.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Diving-Side
-Video: 008
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 55
-DEBUG: cls_category=1: desired lags (-50) = 5
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 6]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 13, video 008.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Diving-Side
-Video: 009
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 55
-DEBUG: cls_category=1: desired lags (-50) = 5
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 6]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 13, video 009.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Diving-Side
-Video: 010
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 55
-DEBUG: cls_category=1: desired lags (-50) = 5
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 6]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 13, video 010.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Successfully processed Activity ID: 13 at Tue Jun 10 01:09:51 PDT 2025
-generate_wifi_from_video: Received activity_id = 14
-Class: Golf-Swing-Side
-Video: 001
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 60
-DEBUG: cls_category=1: desired lags (-50) = 10
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 11]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 14, video 001.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Golf-Swing-Side
-Video: 002
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 60
-DEBUG: cls_category=1: desired lags (-50) = 10
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 11]
-DEBUG: Peaks found. action_period calculated as: 10
-[Warning: Could not determine a valid period for activity 14, video 002.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Golf-Swing-Side
-Video: 003
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 60
-DEBUG: cls_category=1: desired lags (-50) = 10
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 11]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 14, video 003.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Golf-Swing-Side
-Video: 004
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 60
-DEBUG: cls_category=1: desired lags (-50) = 10
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 11]
-DEBUG: Peaks found. action_period calculated as: 8
-[Warning: Could not determine a valid period for activity 14, video 004.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Golf-Swing-Side
-Video: 005
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 60
-DEBUG: cls_category=1: desired lags (-50) = 10
-DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 11]
-DEBUG: Peaks found. action_period calculated as: 4.5
-[Warning: Could not determine a valid period for activity 14, video 005.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Successfully processed Activity ID: 14 at Tue Jun 10 01:11:06 PDT 2025
-generate_wifi_from_video: Received activity_id = 15
-Class: Kicking-Front
-Video: 001
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 23
-DEBUG: cls_category=1: desired lags (-50) = -27
-DEBUG: cls_category=1: -50 lags invalid, trying fallback N-1 lags = 22
-DEBUG: cls_category=1: autocorr with N-1 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 23]
-DEBUG: Peaks found. action_period calculated as: 10.5
-[Warning: Could not determine a valid period for activity 15, video 001.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Kicking-Front
-Video: 002
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 23
-DEBUG: cls_category=1: desired lags (-50) = -27
-DEBUG: cls_category=1: -50 lags invalid, trying fallback N-1 lags = 22
-DEBUG: cls_category=1: autocorr with N-1 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 23]
-DEBUG: Peaks found. action_period calculated as: 7
-[Warning: Could not determine a valid period for activity 15, video 002.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Kicking-Front
-Video: 003
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 23
-DEBUG: cls_category=1: desired lags (-50) = -27
-DEBUG: cls_category=1: -50 lags invalid, trying fallback N-1 lags = 22
-DEBUG: cls_category=1: autocorr with N-1 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 23]
-DEBUG: Peaks found. action_period calculated as: 15
-[Warning: Could not determine a valid period for activity 15, video 003.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Kicking-Front
-Video: 004
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 23
-DEBUG: cls_category=1: desired lags (-50) = -27
-DEBUG: cls_category=1: -50 lags invalid, trying fallback N-1 lags = 22
-DEBUG: cls_category=1: autocorr with N-1 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 23]
-DEBUG: Peaks found. action_period calculated as: 12
-[Warning: Could not determine a valid period for activity 15, video 004.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Kicking-Front
-Video: 005
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 23
-DEBUG: cls_category=1: desired lags (-50) = -27
-DEBUG: cls_category=1: -50 lags invalid, trying fallback N-1 lags = 22
-DEBUG: cls_category=1: autocorr with N-1 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 23]
-DEBUG: Peaks found. action_period calculated as: 18
-[Warning: Could not determine a valid period for activity 15, video 005.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Kicking-Front
-Video: 006
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 23
-DEBUG: cls_category=1: desired lags (-50) = -27
-DEBUG: cls_category=1: -50 lags invalid, trying fallback N-1 lags = 22
-DEBUG: cls_category=1: autocorr with N-1 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 23]
-DEBUG: Peaks found. action_period calculated as: 11
-[Warning: Could not determine a valid period for activity 15, video 006.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Kicking-Front
-Video: 007
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 23
-DEBUG: cls_category=1: desired lags (-50) = -27
-DEBUG: cls_category=1: -50 lags invalid, trying fallback N-1 lags = 22
-DEBUG: cls_category=1: autocorr with N-1 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 23]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 15, video 007.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Kicking-Front
-Video: 008
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 23
-DEBUG: cls_category=1: desired lags (-50) = -27
-DEBUG: cls_category=1: -50 lags invalid, trying fallback N-1 lags = 22
-DEBUG: cls_category=1: autocorr with N-1 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 23]
-DEBUG: No peaks found by findpeaks. action_period set to NaN.
-[Warning: Could not determine a valid period for activity 15, video 008.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
-Simulating the WiFi signal
-Generating the WiFi Signal at link: x ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: y ...
-Generating the spectrogram ...
-Generating the WiFi Signal at link: z ...
-Generating the spectrogram ...
-Class: Kicking-Front
-Video: 009
-Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 23
-DEBUG: cls_category=1: desired lags (-50) = -27
-DEBUG: cls_category=1: -50 lags invalid, trying fallback N-1 lags = 22
-DEBUG: cls_category=1: autocorr with N-1 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 23]
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
 DEBUG: Peaks found. action_period calculated as: 9
-[Warning: Could not determine a valid period for activity 15, video 009.
-Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
 Simulating the WiFi signal
 Generating the WiFi Signal at link: x ...
 Generating the spectrogram ...
@@ -472,18 +683,1589 @@ Generating the WiFi Signal at link: y ...
 Generating the spectrogram ...
 Generating the WiFi Signal at link: z ...
 Generating the spectrogram ...
-Class: Kicking-Front
+Class: skateboarding-front
+Video: 004
+Obtaining mesh and aligning it ...
+[Warning: Could not parse frame number from mesh filename:
+761-39000_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39001_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39002_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39003_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39004_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39005_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39006_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39007_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39008_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39009_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39010_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39011_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39012_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39013_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39014_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39015_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39016_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39017_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39018_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39019_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39020_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39021_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39022_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39023_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39024_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39025_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39026_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39027_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39028_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39029_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39030_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39031_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39032_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39033_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39034_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39035_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39036_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39037_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39038_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39039_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39040_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39041_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39042_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39043_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39044_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39045_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39046_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39047_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39048_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39049_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39050_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39051_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39052_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39053_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39054_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39055_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39056_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39057_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39058_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39059_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39060_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39061_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39062_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39063_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39064_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39065_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39066_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39067_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39068_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+761-39069_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
+DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
+DEBUG: No peaks found by findpeaks. action_period set to NaN.
+[Warning: Could not determine a valid period for activity 17, video 004.
+Skipping interpolation and smoothing.] 
+[> In generate_wifi_from_video (line 193)] 
+Simulating the WiFi signal
+Generating the WiFi Signal at link: x ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: y ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: z ...
+Generating the spectrogram ...
+Class: skateboarding-front
+Video: 005
+Obtaining mesh and aligning it ...
+[Warning: Could not parse frame number from mesh filename:
+860-2001_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2002_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2003_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2004_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2005_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2006_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2007_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2008_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2009_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2010_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2011_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2012_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2013_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2014_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2015_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2016_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2017_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2018_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2019_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2020_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2021_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2022_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2023_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2024_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2025_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2026_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2027_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2028_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2029_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2030_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2031_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2032_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2033_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2034_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2035_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2036_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2037_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2038_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2039_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2040_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2041_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2042_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2043_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2044_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2045_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2046_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2047_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2048_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2049_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2050_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2051_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2052_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2053_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2054_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2055_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2056_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2057_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2058_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2059_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2060_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2061_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2062_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2063_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2064_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2065_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2066_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2067_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2068_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2069_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2070_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
+DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
+DEBUG: Peaks found. action_period calculated as: 5
+[Warning: Could not determine a valid period for activity 17, video 005.
+Skipping interpolation and smoothing.] 
+[> In generate_wifi_from_video (line 193)] 
+Simulating the WiFi signal
+Generating the WiFi Signal at link: x ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: y ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: z ...
+Generating the spectrogram ...
+Class: skateboarding-front
+Video: 006
+Obtaining mesh and aligning it ...
+[Warning: Could not parse frame number from mesh filename:
+860-2729_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2730_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2731_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2732_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2733_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2734_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2735_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2736_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2737_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2738_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2739_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2740_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2741_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2742_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2743_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2744_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2745_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2746_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2747_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2748_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2749_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2750_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2751_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2752_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2753_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2754_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2755_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2756_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2757_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2758_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2759_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2760_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2761_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2762_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2763_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2764_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2765_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2766_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2767_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2768_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2769_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2770_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2771_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2772_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2773_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2774_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2775_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2776_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2777_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2778_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2779_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2780_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2781_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2782_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2783_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2784_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2785_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2786_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2787_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2788_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2789_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2790_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2791_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2792_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2793_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2794_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2795_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2796_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2797_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-2798_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
+DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
+DEBUG: No peaks found by findpeaks. action_period set to NaN.
+[Warning: Could not determine a valid period for activity 17, video 006.
+Skipping interpolation and smoothing.] 
+[> In generate_wifi_from_video (line 193)] 
+Simulating the WiFi signal
+Generating the WiFi Signal at link: x ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: y ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: z ...
+Generating the spectrogram ...
+Class: skateboarding-front
+Video: 007
+Obtaining mesh and aligning it ...
+[Warning: Could not parse frame number from mesh filename:
+860-37150_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37151_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37152_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37153_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37154_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37155_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37156_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37157_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37158_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37159_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37160_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37161_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37162_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37163_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37164_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37165_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37166_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37167_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37168_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37169_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37170_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37171_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37172_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37173_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37174_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37175_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37176_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37177_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37178_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37179_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37180_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37181_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37182_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37183_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37184_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37185_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37186_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37187_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37188_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37189_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37190_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37191_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37192_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37193_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37194_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37195_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37196_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37197_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37198_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37199_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37200_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37201_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37202_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37203_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37204_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37205_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37206_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37207_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37208_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37209_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37210_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37211_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37212_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37213_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37214_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37215_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37216_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37217_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37218_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-37219_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
+DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
+DEBUG: Peaks found. action_period calculated as: 15
+Simulating the WiFi signal
+Generating the WiFi Signal at link: x ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: y ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: z ...
+Generating the spectrogram ...
+Class: skateboarding-front
+Video: 008
+Obtaining mesh and aligning it ...
+[Warning: Could not parse frame number from mesh filename:
+860-38064_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38065_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38066_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38067_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38068_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38069_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38070_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38071_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38072_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38073_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38074_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38075_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38076_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38077_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38078_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38079_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38080_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38081_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38082_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38083_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38084_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38085_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38086_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38087_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38088_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38089_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38090_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38091_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38092_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38093_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38094_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38095_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38096_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38097_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38098_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38099_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38100_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38101_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38102_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38103_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38104_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38105_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38106_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38107_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38108_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38109_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38110_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38111_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38112_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38113_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38114_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38115_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38116_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38117_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38118_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38119_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38120_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38121_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38122_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38123_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38124_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38125_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38126_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38127_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38128_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38129_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38130_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38131_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38132_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+860-38133_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
+DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
+DEBUG: Peaks found. action_period calculated as: 11
+Simulating the WiFi signal
+Generating the WiFi Signal at link: x ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: y ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: z ...
+Generating the spectrogram ...
+Class: skateboarding-front
+Video: 009
+Obtaining mesh and aligning it ...
+[Warning: Could not parse frame number from mesh filename:
+947-58108_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58109_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58110_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58111_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58112_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58113_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58114_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58115_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58116_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58117_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58118_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58119_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58120_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58121_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58122_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58123_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58124_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58125_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58126_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58127_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58128_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58129_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58130_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58131_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58132_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58133_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58134_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58135_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58136_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58137_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58138_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58139_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58140_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58141_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58142_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58143_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58144_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58145_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58146_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58147_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58148_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58149_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58150_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58151_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58152_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58153_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58154_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58155_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58156_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58157_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58158_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58159_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58160_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58161_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58162_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58163_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58164_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58165_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58166_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58167_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58168_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58169_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58170_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58171_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58172_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58173_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58174_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58175_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58176_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-58177_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
+DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
+DEBUG: No peaks found by findpeaks. action_period set to NaN.
+[Warning: Could not determine a valid period for activity 17, video 009.
+Skipping interpolation and smoothing.] 
+[> In generate_wifi_from_video (line 193)] 
+Simulating the WiFi signal
+Generating the WiFi Signal at link: x ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: y ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: z ...
+Generating the spectrogram ...
+Class: skateboarding-front
 Video: 010
 Obtaining mesh and aligning it ...
-DEBUG: cls_category=1: series length = 22
-DEBUG: cls_category=1: desired lags (-50) = -28
-DEBUG: cls_category=1: -50 lags invalid, trying fallback N-1 lags = 21
-DEBUG: cls_category=1: autocorr with N-1 lags SUCCEEDED.
-DEBUG: cls_category=1: Final ACF class: double, size: [1 22]
-DEBUG: Peaks found. action_period calculated as: 12
-[Warning: Could not determine a valid period for activity 15, video 010.
+[Warning: Could not parse frame number from mesh filename:
+947-70005_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70006_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70007_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70008_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70009_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70010_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70011_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70012_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70013_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70014_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70015_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70016_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70017_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70018_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70019_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70020_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70021_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70022_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70023_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70024_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70025_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70026_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70027_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70028_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70029_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70030_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70031_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70032_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70033_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70034_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70035_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70036_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70037_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70038_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70039_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70040_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70041_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70042_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70043_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70044_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70045_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70046_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70047_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70048_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70049_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70050_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70051_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70052_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70053_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70054_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70055_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70056_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70057_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70058_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70059_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70060_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70061_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70062_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70063_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70064_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70065_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70066_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70067_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70068_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70069_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70070_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70071_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70072_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70073_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70074_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
+DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
+DEBUG: No peaks found by findpeaks. action_period set to NaN.
+[Warning: Could not determine a valid period for activity 17, video 010.
 Skipping interpolation and smoothing.] 
-[> In generate_wifi_from_video (line 190)] 
+[> In generate_wifi_from_video (line 193)] 
 Simulating the WiFi signal
 Generating the WiFi Signal at link: x ...
 Generating the spectrogram ...
@@ -491,4 +2273,457 @@ Generating the WiFi Signal at link: y ...
 Generating the spectrogram ...
 Generating the WiFi Signal at link: z ...
 Generating the spectrogram ...
-Successfully processed Activity ID: 15 at Tue Jun 10 01:11:56 PDT 2025
+Class: skateboarding-front
+Video: 011
+Obtaining mesh and aligning it ...
+[Warning: Could not parse frame number from mesh filename:
+947-70454_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70455_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70456_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70457_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70458_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70459_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70460_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70461_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70462_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70463_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70464_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70465_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70466_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70467_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70468_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70469_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70470_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70471_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70472_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70473_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70474_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70475_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70476_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70477_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70478_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70479_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70480_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70481_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70482_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70483_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70484_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70485_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70486_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70487_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70488_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70489_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70490_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70491_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70492_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70493_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70494_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70495_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70496_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70497_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70498_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70499_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70500_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70501_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70502_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70503_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70504_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70505_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70506_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70507_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70508_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70509_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70510_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70511_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70512_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70513_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70514_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70515_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70516_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70517_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70518_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70519_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70520_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70521_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70522_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+947-70523_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
+DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
+DEBUG: Peaks found. action_period calculated as: 18
+Simulating the WiFi signal
+Generating the WiFi Signal at link: x ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: y ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: z ...
+Generating the spectrogram ...
+Class: skateboarding-front
+Video: 012
+Obtaining mesh and aligning it ...
+[Warning: Could not parse frame number from mesh filename:
+1058-22003_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22004_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22005_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22006_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22007_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22008_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22009_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22010_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22011_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22012_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22013_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22014_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22015_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22016_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22017_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22018_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22019_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22020_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22021_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22022_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22023_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22024_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22025_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22026_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22027_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22028_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22029_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22030_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22031_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22032_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22033_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22034_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22035_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22036_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22037_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22038_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22039_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22040_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22041_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22042_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22043_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22044_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22045_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22046_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22047_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22048_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22049_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22050_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22051_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22052_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22053_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22054_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22055_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22056_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22057_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22058_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22059_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22060_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22061_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22062_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22063_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22064_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22065_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22066_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22067_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22068_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22069_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22070_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22071_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+[Warning: Could not parse frame number from mesh filename:
+1058-22072_cropped_im_mesh.mat using original logic] 
+[> In generate_wifi_from_video (line 150)] 
+DEBUG: cls_category=1: series length = 70
+DEBUG: cls_category=1: desired lags (-50) = 20
+DEBUG: cls_category=1: autocorr with -50 lags SUCCEEDED.
+DEBUG: cls_category=1: Final ACF class: double, size: [1 21]
+DEBUG: No peaks found by findpeaks. action_period set to NaN.
+[Warning: Could not determine a valid period for activity 17, video 012.
+Skipping interpolation and smoothing.] 
+[> In generate_wifi_from_video (line 193)] 
+Simulating the WiFi signal
+Generating the WiFi Signal at link: x ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: y ...
+Generating the spectrogram ...
+Generating the WiFi Signal at link: z ...
+Generating the spectrogram ...
+Successfully processed Activity ID: 17 at Wed Jun 11 18:26:16 PDT 2025
